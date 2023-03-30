@@ -2,8 +2,7 @@
 - This directory contains a simple implementation of a `hash table`. The `hash table` is implemented with two collision resolution techniques: `chaining` and `linear probing`.
 
 ## Assignment :page_with_curl:
-- For this programming assignment, you will implement a Hash Table with both chaining and 
-    - linear probing solutions to collisions. 
+- For this programming assignment, you will implement a Hash Table with both chaining and linear probing solutions to collisions. 
     - Create a class to represent each entry in your Hash Table, i.e. each entry holds a 
       {key,value}
     - Create a class to represent your Hash Table, where you will implement two different 
