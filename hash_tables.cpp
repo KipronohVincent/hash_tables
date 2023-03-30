@@ -3,7 +3,7 @@
 #include <string>
 
 using namespace std;
-
+// This class represents an entry in the hash table.
 class Entry {
 public:
     string key;
@@ -11,7 +11,7 @@ public:
     Entry* next;
     Entry(string k, string v) : key(k), value(v), next(nullptr) {}
 };
-
+// This class represents the hash table itself.
 class HashTable {
 private:
     vector<Entry*> table;
@@ -27,6 +27,7 @@ public:
         }
         return sum % size;
     }
+    // Chaining function
     void insert_with_chaining(string key, string value) {
         int index = hash_function(key);
         Entry* entry = table[index];
@@ -41,6 +42,7 @@ public:
             entry->next = new Entry(key, value);
         }
     }
+    // Linear Probing function
     void insert_with_linear_probing(string key, string value) {
         int index = hash_function(key);
         if (table[index] == nullptr) {
